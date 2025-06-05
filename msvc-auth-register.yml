@@ -1,4 +1,4 @@
-spring:
+sspring:
  datasource:
    url: jdbc:postgresql://localhost:5433/users
    username: admin
@@ -12,17 +12,17 @@ spring:
  main:
    allow-bean-definition-overriding: true
 server:
- Port: ${PORT:0}
+ Port: 9292
 
 springdoc:
   swagger-ui:
-    path: /doctors/swagger-ui.html
+    path: /users/swagger-ui.html
   api-docs:
-    path: /doctors/api-docs
+    path: /users/api-docs
     enabled: true
-eureka:
- client:
-  service-url:
-   defaultZone: http://localhost:8761/eureka
- instance:
-  instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.value}
+# eureka:
+#  client:
+#   service-url:
+#    defaultZone: http://localhost:8761/eureka
+#  instance:
+#   instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.value}
