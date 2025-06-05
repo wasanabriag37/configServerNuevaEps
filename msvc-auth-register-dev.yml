@@ -26,6 +26,6 @@ eureka:
    defaultZone: http://localhost:8761/eureka
  instance:
   instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.value}
- jwt:
-  secret:
-    key: ZorKMdMELhJignPapUu+tm+yrGuKNi4u6JyJ94n26v5K+I7QehQ7gSGyDbJJ+Q2j
+jwt:
+ secret:
+  key: ZorKMdMELhJignPapUu+tm+yrGuKNi4u6JyJ94n26v5K+I7QehQ7gSGyDbJJ+Q2j
