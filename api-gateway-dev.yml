@@ -13,7 +13,7 @@ spring:
           predicates:
             - Path=/medicine/**
           filters:
-            - name: JwtHeaderGatewayFilterFactory
+            - name: JwtHeader
               args:
                 requireValidToken: true
 
