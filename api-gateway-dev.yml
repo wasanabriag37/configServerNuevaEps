@@ -20,7 +20,7 @@ spring:
 # Configuración del JWT
 jwt:
   secret:
-    key: tu_secret_key_base64_aqui
+    key: ZorKMdMELhJignPapUu+tm+yrGuKNi4u6JyJ94n26v5K+I7QehQ7gSGyDbJJ+Q2j
 
 server:
   port: 8080
