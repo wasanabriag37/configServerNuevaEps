@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: msvc-auth-register
+          uri: lb://msvc-auth-register
+          predicates:
+            - Path=/auth/**
+            
+        # Agrega más rutas según necesites
+        - id: msvc-request-medicine
+          uri: lb://msvc-request-medicine
+          predicates:
+            - Path=/medicine/**
+          filters:
+            - name: JwtHeaderGatewayFilterFactory
+              args:
+                requireValidToken: true
+
+# Configuración del JWT
+jwt:
+  secret:
+    key: tu_secret_key_base64_aqui
+
+server:
+  port: 8080
