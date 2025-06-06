@@ -14,8 +14,8 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-  server:
-    port: 9393
+server:
+  port: 9393
 
 springdoc:
   swagger-ui:
