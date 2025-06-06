@@ -12,6 +12,10 @@ spring:
           uri: lb://msvc-request-medicine
           predicates:
             - Path=/medicine/**
+          filters:
+            - name: JwtHeaderGatewayFilterFactory
+              args:
+                requireValidToken: true
 
 
 # Configuración del JWT
