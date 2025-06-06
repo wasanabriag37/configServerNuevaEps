@@ -16,9 +16,9 @@ server:
 
 springdoc:
   swagger-ui:
-    path: /users/swagger-ui.html
+    path: /auth/swagger-ui.html
   api-docs:
-    path: /users/api-docs
+    path: /auth/api-docs
     enabled: true
 eureka:
  client:
