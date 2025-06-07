@@ -19,6 +19,15 @@ spring:
           predicates:
             - Path=/auth/**
             
+        - id: msvc-auth-admin
+          uri: lb://msvc-auth-register
+          predicates:
+            - Path=/user/v1/**
+          filters:
+            - name: JwtHeader
+              args:
+                requireValidToken: true
+            
         - id: msvc-request-medicine
           uri: lb://msvc-request-medicine
           predicates:
