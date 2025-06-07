@@ -19,7 +19,15 @@ spring:
           predicates:
             - Path=/auth/**
             
-        
+        - id: msvc-request-medicine
+          uri: lb://msvc-request-medicine
+          predicates:
+            - Path=/medicine/**
+          filters:
+            - name: JwtHeader
+              args:
+                requireValidToken: true
+                
         - id: msvc-request-medicine
           uri: lb://msvc-request-medicine
           predicates:
