@@ -23,6 +23,7 @@ spring:
           uri: lb://msvc-request-medicine
           predicates:
             - Path=/requestMedicine/**
+            - Path=/medicine/**
           filters:
             - name: JwtHeader
               args:
